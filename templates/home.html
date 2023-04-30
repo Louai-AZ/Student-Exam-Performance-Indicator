@@ -1,15 +1,13 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Student Exam Performance Indicator</title>
-        <link rel="stylesheet" href="home.css">
+        <title>Student Exam Performance Prediction</title>
     </head>
-<body>
+<body >
     <div class="login">
 
         <form action="{{ url_for('predict_datapoint')}}" method="post">
-        <h1>
+        <h1 >
             <legend>Student Exam Performance Prediction</legend>
         </h1>
         <div class="mb-3">
@@ -19,12 +17,12 @@
                 <option value="male">
                     Male
                 </option>
-                <option value="female">
+                <option value="female">  
                     Female
                 </option>
             </select>
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Race or Ethnicity</label>
             <select class="form-control" name="ethnicity" placeholder="Enter you ethnicity" required>
                 <option class="placeholder" selected disabled value="">Select Ethnicity</option>
@@ -45,7 +43,7 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Parental Level of Education</label>
             <select class="form-control" name="parental_level_of_education"
                 placeholder="Enter you Parent Education" required>
@@ -70,7 +68,7 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Lunch Type</label>
             <select class="form-control" name="lunch" placeholder="Enter you Lunch" required>
                 <option class="placeholder" selected disabled value="">Select Lunch Type</option>
@@ -82,7 +80,7 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Test preparation Course</label>
             <select class="form-control" name="test_preparation_course" placeholder="Enter you Course"
                 required>
@@ -95,22 +93,44 @@
                 </option>
             </select>
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Writing Score out of 100</label>
             <input class="form-control" type="number" name="reading_score"
                 placeholder="Enter your Reading score" min='0' max='100' />
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <label class="form-label">Reading Score out of 100</label>
             <input class="form-control" type="number" name="writing_score"
                 placeholder="Enter your Reading Score" min='0' max='100' />
         </div>
-        <div class="mb-3">
+        <div    class="mb-3">
             <input class="btn btn-primary" type="submit" value="Predict your Maths Score" required />
         </div>
     </form>
-    <h2>
+    <h2 >
        THE  prediction is {{results}}
     </h2>
    <body>
 </html>
+
+
+<style>
+
+    body {
+        margin: auto;
+        margin-top:20px;
+        width: 80%;
+        height: 80%;
+        border: 2px solid blue;           
+        /* padding: 10px; */
+        text-align:center;
+    }
+    .login {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .mb-3 , h1 , h2{
+        text-align:center; 
+        margin-top:15px;
+    }
+</style>
